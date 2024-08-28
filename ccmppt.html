@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <!-- <iframe
+      src="https://view.officeapps.live.com/op/embed.aspx?src=C:\Users\jooyoung\Desktop\안녕하십니까.pptx"
+      width="800"
+      height="600"
+    ></iframe> -->
+    <img src="./img/card1.png" alt="" />
+    <button>전체화면</button>
+    <script>
+      const tmp = document.querySelector("img");
+      //const screenDetails = window.getScreenDetails;
+      //console.log(screenDetails.screens);
+      // 문제: 전체화면시 듀얼모니터를 설정하고 싶은데 Window.screen 값이 undefined임.
+      console.log(Window);
+
+      // 버튼 누르면 이미지 전체화면
+      document.querySelector("button").addEventListener("click", () => {
+        let res = tmp.requestFullscreen(
+          { navigationUI: "hide" },
+          { screen: screenDetails }
+        );
+        console.log(res);
+      });
+    </script>
+  </body>
+</html>
